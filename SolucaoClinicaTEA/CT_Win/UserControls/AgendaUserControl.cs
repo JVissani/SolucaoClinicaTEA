@@ -443,7 +443,6 @@ namespace CT_Win.UserControls
             if (_selecionado == null) return;
 
             var menu = new ContextMenuStrip();
-            menu.Closed += (s2, e2) => menu.Dispose();
 
             foreach (var status in new[] { "Agendado", "Realizado", "Faltou", "Cancelado" })
             {
