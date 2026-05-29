@@ -125,10 +125,13 @@ ClinicaTEA/
 | FontAwesome.Sharp | 6.6.0 | Ícones vetoriais na interface |
 | Microsoft.Bcl.AsyncInterfaces | 9.0.1 | Dependência transitiva do Dapper |
 
-As dependências são restauradas automaticamente pelo Visual Studio ou via:
+As dependências são restauradas automaticamente pelo Visual Studio ou via MSBuild:
 ```powershell
-nuget restore SolucaoClinicaTEA\SolucaoClinicaTEA\SolucaoClinicaTEA.slnx
+$msbuild = "C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Current\Bin\MSBuild.exe"
+& $msbuild "SolucaoClinicaTEA\SolucaoClinicaTEA\SolucaoClinicaTEA.slnx" /t:Restore /p:RestorePackagesConfig=true /v:minimal
 ```
+
+> **Atenção:** O comando `nuget restore` requer o `nuget.exe` instalado separadamente. O comando MSBuild acima funciona sem instalação adicional.
 
 ---
 
