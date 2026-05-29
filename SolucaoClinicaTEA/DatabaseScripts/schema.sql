@@ -181,3 +181,15 @@ INSERT INTO Especialidades (Nome, ConselhoSigla, CorHex, Ativo) VALUES
     ('Psicopedagogia',         'ABPp',    '#8B5CF6', 1),
     ('Neurologia',             'CFM',     '#EC4899', 1);
 GO
+
+-- Usuário administrador padrão — login: admin | senha: admin123
+-- Hash SHA-256 (UTF-16 LE) gerado pela classe CriptografiaSenha.CalcularHash()
+INSERT INTO Usuarios (Login, SenhaHash, Salt, Nome, Perfil, Ativo) VALUES (
+    'admin',
+    '068FD459A29B281655624ED9D0D5ABD06BAF27B1CC2D5E633677CADF031DE5E6',
+    'a1b2c3d4-e5f6-7890-abcd-ef1234567890',
+    'Administrador',
+    'Admin',
+    1
+);
+GO
