@@ -472,9 +472,9 @@ O campo `Perfil` (`Admin`, `Recepcao`, `Profissional`) é exibido no cabeçalho 
 
 O código-fonte completo deste projeto, incluindo os arquivos de banco de dados, scripts SQL de criação do schema, os binários necessários para compilação e este documento PDF, estão disponíveis no repositório GitHub abaixo:
 
-> **Link do repositório:** `[INSERIR O LINK DO REPOSITÓRIO GITHUB AQUI]`
+> **Link do repositório:** [https://github.com/JVissani/SolucaoClinicaTEA](https://github.com/JVissani/SolucaoClinicaTEA)
 
-O repositório foi configurado para acesso público e compartilhado com o e-mail **datorre@gmail.com**. Os arquivos estão organizados na branch `main` e incluem:
+O repositório foi configurado para acesso público e compartilhado com o e-mail **datorre@gmail.com**. Os arquivos estão organizados na branch `master` e incluem:
 
 - `/SolucaoClinicaTEA/` — código-fonte completo dos projetos `CT_Negocio` e `CT_Win`
 - `/DatabaseScripts/schema.sql` — script de criação de todas as tabelas, índices e dados iniciais
