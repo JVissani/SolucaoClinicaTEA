@@ -2,7 +2,7 @@
   INSTRUÇÕES PARA CONVERSÃO EM PDF:
   1. Abra este arquivo em um editor Markdown (VS Code + extensão "Markdown PDF",
      Typora, ou pandoc via linha de comando).
-  2. Insira os prints de tela nos locais marcados com [INSERIR PRINT AQUI].
+  2. Insira os prints de tela nos locais marcados com <img src="prints/3_01_login.png" alt="3.1 Tela de Login" style="max-width:100%; margin: 12px 0; border: 1px solid #ddd; border-radius: 4px;">.
   3. Exporte para PDF mantendo margens de 3 cm (superior/esquerda) e 2 cm (inferior/direita)
      conforme ABNT NBR 14724.
 -->
@@ -234,7 +234,7 @@ O campo `Perfil` (`Admin`, `Recepcao`, `Profissional`) é exibido no cabeçalho 
 
 ### 3.1 Tela de Login
 
-[INSERIR PRINT AQUI]
+<img src="prints/3_01_login.png" alt="3.1 Tela de Login" style="max-width:100%; margin: 12px 0; border: 1px solid #ddd; border-radius: 4px;">
 
 **Objetivo:** Autenticar o usuário antes de conceder acesso ao sistema.
 
@@ -249,7 +249,7 @@ O campo `Perfil` (`Admin`, `Recepcao`, `Profissional`) é exibido no cabeçalho 
 
 ### 3.2 Dashboard Principal
 
-[INSERIR PRINT AQUI]
+<img src="prints/3_02_dashboard.png" alt="3.2 Dashboard Principal" style="max-width:100%; margin: 12px 0; border: 1px solid #ddd; border-radius: 4px;">
 
 **Objetivo:** Servir como ponto de navegação central do sistema, exibindo as seis áreas funcionais disponíveis.
 
@@ -264,7 +264,7 @@ O campo `Perfil` (`Admin`, `Recepcao`, `Profissional`) é exibido no cabeçalho 
 
 ### 3.3 Módulo de Pacientes
 
-[INSERIR PRINT AQUI]
+<img src="prints/3_03_pacientes_lista.png" alt="3.3 Modulo de Pacientes" style="max-width:100%; margin: 12px 0; border: 1px solid #ddd; border-radius: 4px;">
 
 **Objetivo:** Listar, buscar, cadastrar, editar e inativar pacientes.
 
@@ -280,7 +280,7 @@ O campo `Perfil` (`Admin`, `Recepcao`, `Profissional`) é exibido no cabeçalho 
 
 ### 3.4 Formulário de Cadastro/Edição de Paciente
 
-[INSERIR PRINT AQUI]
+<img src="prints/3_04_paciente_form.png" alt="3.4 Formulario de Paciente" style="max-width:100%; margin: 12px 0; border: 1px solid #ddd; border-radius: 4px;">
 
 **Objetivo:** Registrar ou atualizar os dados completos de um paciente.
 
@@ -295,7 +295,7 @@ O campo `Perfil` (`Admin`, `Recepcao`, `Profissional`) é exibido no cabeçalho 
 
 ### 3.5 Módulo de Profissionais
 
-[INSERIR PRINT AQUI]
+<img src="prints/3_05_profissionais_lista.png" alt="3.5 Modulo de Profissionais" style="max-width:100%; margin: 12px 0; border: 1px solid #ddd; border-radius: 4px;">
 
 **Objetivo:** Gerenciar a equipe clínica do estabelecimento.
 
@@ -310,7 +310,7 @@ O campo `Perfil` (`Admin`, `Recepcao`, `Profissional`) é exibido no cabeçalho 
 
 ### 3.6 Formulário de Cadastro/Edição de Profissional
 
-[INSERIR PRINT AQUI]
+<img src="prints/3_06_profissional_form.png" alt="3.6 Formulario de Profissional" style="max-width:100%; margin: 12px 0; border: 1px solid #ddd; border-radius: 4px;">
 
 **Objetivo:** Registrar ou atualizar os dados de um membro da equipe clínica.
 
@@ -324,7 +324,7 @@ O campo `Perfil` (`Admin`, `Recepcao`, `Profissional`) é exibido no cabeçalho 
 
 ### 3.7 Módulo de Especialidades
 
-[INSERIR PRINT AQUI]
+<img src="prints/3_07_especialidades_lista.png" alt="3.7 Modulo de Especialidades" style="max-width:100%; margin: 12px 0; border: 1px solid #ddd; border-radius: 4px;">
 
 **Objetivo:** Gerenciar as especialidades clínicas cadastradas (ex.: Psicologia, Fonoaudiologia).
 
@@ -338,7 +338,7 @@ O campo `Perfil` (`Admin`, `Recepcao`, `Profissional`) é exibido no cabeçalho 
 
 ### 3.8 Formulário de Cadastro/Edição de Especialidade
 
-[INSERIR PRINT AQUI]
+<img src="prints/3_08_especialidade_form.png" alt="3.8 Formulario de Especialidade" style="max-width:100%; margin: 12px 0; border: 1px solid #ddd; border-radius: 4px;">
 
 **Objetivo:** Registrar ou atualizar uma especialidade clínica.
 
@@ -352,7 +352,7 @@ O campo `Perfil` (`Admin`, `Recepcao`, `Profissional`) é exibido no cabeçalho 
 
 ### 3.9 Módulo de Salas
 
-[INSERIR PRINT AQUI]
+<img src="prints/3_09_salas_lista.png" alt="3.9 Modulo de Salas" style="max-width:100%; margin: 12px 0; border: 1px solid #ddd; border-radius: 4px;">
 
 **Objetivo:** Gerenciar os espaços físicos disponíveis para atendimento.
 
@@ -366,7 +366,7 @@ O campo `Perfil` (`Admin`, `Recepcao`, `Profissional`) é exibido no cabeçalho 
 
 ### 3.10 Módulo de Agenda
 
-[INSERIR PRINT AQUI]
+<img src="prints/3_10_agenda.png" alt="3.10 Modulo de Agenda" style="max-width:100%; margin: 12px 0; border: 1px solid #ddd; border-radius: 4px;">
 
 **Objetivo:** Visualizar, criar, editar e gerenciar o status dos agendamentos.
 
@@ -381,7 +381,7 @@ O campo `Perfil` (`Admin`, `Recepcao`, `Profissional`) é exibido no cabeçalho 
 
 ### 3.11 Formulário de Novo/Editar Agendamento
 
-[INSERIR PRINT AQUI]
+<img src="prints/3_11_agendamento_form.png" alt="3.11 Formulario de Agendamento" style="max-width:100%; margin: 12px 0; border: 1px solid #ddd; border-radius: 4px;">
 
 **Objetivo:** Cadastrar um novo agendamento ou editar um existente.
 
@@ -395,7 +395,7 @@ O campo `Perfil` (`Admin`, `Recepcao`, `Profissional`) é exibido no cabeçalho 
 
 ### 3.12 Formulário de Evolução de Sessão
 
-[INSERIR PRINT AQUI]
+<img src="prints/3_12_evolucao.png" alt="3.12 Evolucao de Sessao" style="max-width:100%; margin: 12px 0; border: 1px solid #ddd; border-radius: 4px;">
 
 **Objetivo:** Registrar o relato clínico de uma sessão realizada.
 
@@ -410,7 +410,7 @@ O campo `Perfil` (`Admin`, `Recepcao`, `Profissional`) é exibido no cabeçalho 
 
 ### 3.13 Tela de Objetivos Terapêuticos
 
-[INSERIR PRINT AQUI]
+<img src="prints/3_13_objetivos_lista.png" alt="3.13 Objetivos Terapeuticos" style="max-width:100%; margin: 12px 0; border: 1px solid #ddd; border-radius: 4px;">
 
 **Objetivo:** Listar e gerenciar os objetivos terapêuticos de um paciente específico.
 
@@ -425,7 +425,7 @@ O campo `Perfil` (`Admin`, `Recepcao`, `Profissional`) é exibido no cabeçalho 
 
 ### 3.14 Formulário de Objetivo Terapêutico
 
-[INSERIR PRINT AQUI]
+<img src="prints/3_14_objetivo_form.png" alt="3.14 Formulario de Objetivo" style="max-width:100%; margin: 12px 0; border: 1px solid #ddd; border-radius: 4px;">
 
 **Objetivo:** Criar ou editar um objetivo terapêutico vinculado a um paciente e especialidade.
 
@@ -439,7 +439,7 @@ O campo `Perfil` (`Admin`, `Recepcao`, `Profissional`) é exibido no cabeçalho 
 
 ### 3.15 Módulo de Relatórios
 
-[INSERIR PRINT AQUI]
+<img src="prints/3_15_relatorios.png" alt="3.15 Modulo de Relatorios" style="max-width:100%; margin: 12px 0; border: 1px solid #ddd; border-radius: 4px;">
 
 **Objetivo:** Oferecer ao gestor uma visão analítica dos atendimentos por período.
 
@@ -454,7 +454,7 @@ O campo `Perfil` (`Admin`, `Recepcao`, `Profissional`) é exibido no cabeçalho 
 
 ### 3.16 Visualizador de Relatórios
 
-[INSERIR PRINT AQUI]
+<img src="prints/3_16_visualizador.png" alt="3.16 Visualizador de Relatorios" style="max-width:100%; margin: 12px 0; border: 1px solid #ddd; border-radius: 4px;">
 
 **Objetivo:** Exibir o resultado de um relatório em formato tabular com opção de impressão.
 
