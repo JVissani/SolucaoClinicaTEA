@@ -1,154 +1,234 @@
-# ClinicaTEA — Sistema de Gestão para Clínica de TEA
+<div align="center">
 
-Sistema desktop desenvolvido em **C# Windows Forms (.NET Framework 4.7.2)** para gerenciamento de clínicas especializadas em Transtorno do Espectro Autista (TEA). Inclui controle de pacientes, equipe multidisciplinar, agenda com verificação de conflitos, registro de evoluções de sessão, objetivos terapêuticos e relatórios gerenciais.
+# 🧩 ClinicaTEA
+
+### Sistema de Gestão para Clínica de Transtorno do Espectro Autista
+
+![C#](https://img.shields.io/badge/C%23-Windows_Forms-239120?style=for-the-badge&logo=csharp&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET_Framework-4.7.2-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL_Server-Express-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D4?style=for-the-badge&logo=windows&logoColor=white)
+
+Sistema **desktop** para gestão de clínicas especializadas em TEA — controle de pacientes, equipe multidisciplinar, agenda com verificação de conflitos, evoluções de sessão, objetivos terapêuticos e relatórios gerenciais.
+
+<img src="SolucaoClinicaTEA/prints/3_02_dashboard.png" width="85%" alt="Dashboard Principal">
+
+</div>
 
 ---
 
-## Pré-requisitos
+## ✨ Funcionalidades
 
-| Ferramenta | Versão mínima | Observação |
+| | Funcionalidade | Descrição |
 |---|---|---|
-| Windows | 10 / 11 | Compatível com 7 e 8.1 |
-| Visual Studio | 2022 (Community) | Com workload **".NET desktop development"** |
-| .NET Framework | 4.7.2 | Já incluso no Windows 10+ |
-| SQL Server Express | 2019 ou 2022 | Instância padrão `.\SQLEXPRESS` |
-
-> **Atenção:** O projeto **não** usa LocalDB. Certifique-se de que o serviço `MSSQL$SQLEXPRESS` está instalado e **em execução** antes de abrir a aplicação.
+| 🔐 | **Autenticação segura** | Hash SHA-256 + salt único por usuário |
+| 👤 | **Cadastro de pacientes** | Dados clínicos do TEA: nível DSM-5, CIPTEA, responsável legal |
+| 👩‍⚕️ | **Equipe multidisciplinar** | Profissionais por especialidade com código de conselho |
+| 📅 | **Agenda inteligente** | Verificação automática de conflitos de profissional e sala |
+| 📝 | **Evolução de sessão** | Humor, engajamento e conteúdo clínico por sessão |
+| 🎯 | **Objetivos terapêuticos** | Por paciente/especialidade com % de atingimento |
+| 📊 | **Relatórios gerenciais** | 7 tipos com filtro de período e impressão |
 
 ---
 
-## Configuração do Banco de Dados
+## 🖥️ Telas do Sistema
 
-### 1. Criar o banco e as tabelas
+### 🔑 Login
 
-Abra o **SQL Server Management Studio (SSMS)** ou o terminal `sqlcmd` e execute o script de schema:
+<img src="SolucaoClinicaTEA/prints/3_01_login.png" width="45%" alt="Tela de Login">
+
+Autenticação com usuário e senha. Mensagens específicas para cada tipo de erro (senha incorreta vs. usuário não encontrado). Suporte a múltiplos perfis: **Admin**, **Recepção** e **Profissional**.
+
+---
+
+### 🏠 Dashboard
+
+<img src="SolucaoClinicaTEA/prints/3_02_dashboard.png" width="85%" alt="Dashboard Principal">
+
+Ponto de navegação central com seis módulos. Cards com efeito de hover e layout responsivo ao redimensionamento da janela.
+
+---
+
+### 👤 Módulo de Pacientes
+
+<img src="SolucaoClinicaTEA/prints/3_03_pacientes_lista.png" width="85%" alt="Lista de Pacientes">
+
+Listagem com busca em tempo real por nome, CPF ou nome social. Filtros por status (Todos / Ativos / Inativos). Colunas: nome, CPF, idade, cidade e nível de suporte DSM-5.
+
+<img src="SolucaoClinicaTEA/prints/3_04_paciente_form.png" width="75%" alt="Formulário de Paciente">
+
+Formulário completo com dados pessoais, dados clínicos do TEA (nível de suporte, data do diagnóstico, número CIPTEA) e dados do responsável legal.
+
+---
+
+### 👩‍⚕️ Módulo de Profissionais
+
+<img src="SolucaoClinicaTEA/prints/3_05_profissionais_lista.png" width="85%" alt="Lista de Profissionais">
+
+Listagem da equipe clínica com chip colorido por especialidade. Cada cor é configurável e usada em toda a interface.
+
+<img src="SolucaoClinicaTEA/prints/3_06_profissional_form.png" width="75%" alt="Formulário de Profissional">
+
+Registro de nome, CPF, registro no conselho (CRP, CRFa, CREFITO…), especialidade e contato.
+
+---
+
+### 🩺 Módulo de Especialidades
+
+<img src="SolucaoClinicaTEA/prints/3_07_especialidades_lista.png" width="85%" alt="Lista de Especialidades">
+
+Gerencia as áreas clínicas com chips coloridos. A cor configurada é usada na agenda e em todos os módulos para identificação visual rápida.
+
+<img src="SolucaoClinicaTEA/prints/3_08_especialidade_form.png" width="75%" alt="Formulário de Especialidade">
+
+Cadastro de nome, sigla do conselho e cor em formato HEX com preview em tempo real.
+
+---
+
+### 🚪 Módulo de Salas
+
+<img src="SolucaoClinicaTEA/prints/3_09_salas_lista.png" width="85%" alt="Lista de Salas">
+
+Cadastro dos espaços físicos com capacidade e recursos sensoriais (iluminação regulável, tapete emborrachado, caixa sensorial…), adaptações importantes para pacientes com TEA.
+
+---
+
+### 📅 Agenda
+
+<img src="SolucaoClinicaTEA/prints/3_10_agenda.png" width="85%" alt="Agenda - Próximos">
+
+Agendamentos agrupados por data com cabeçalhos "Hoje" e "Amanhã" destacados. Dot colorido por status: 🟢 Agendado · ✅ Realizado · 🔴 Faltou · ⚫ Cancelado.
+
+<img src="SolucaoClinicaTEA/prints/3_11_agendamento_form.png" width="75%" alt="Formulário de Agendamento">
+
+Novo agendamento com seleção de paciente, profissional e sala. Validação automática de conflitos de horário antes de salvar.
+
+---
+
+### 📝 Evolução de Sessão
+
+<img src="SolucaoClinicaTEA/prints/3_12_evolucao.png" width="75%" alt="Evolução de Sessão">
+
+Registro clínico pós-sessão com escalas de humor (1–5) e engajamento (1–5), conteúdo da sessão, comportamentos observados e próximos encaminhamentos.
+
+---
+
+### 🎯 Objetivos Terapêuticos
+
+<img src="SolucaoClinicaTEA/prints/3_13_objetivos_lista.png" width="75%" alt="Lista de Objetivos Terapêuticos">
+
+Objetivos por paciente, organizados por especialidade com status (Em Progresso / Concluído / Suspenso) e percentual de atingimento.
+
+<img src="SolucaoClinicaTEA/prints/3_14_objetivo_form.png" width="75%" alt="Formulário de Objetivo">
+
+Cadastro com descrição livre, datas de início e previsão, especialidade vinculada e % de atingimento.
+
+---
+
+### 📊 Relatórios
+
+<img src="SolucaoClinicaTEA/prints/3_15_relatorios.png" width="85%" alt="Módulo de Relatórios">
+
+7 tipos de relatório divididos em três categorias: **Pacientes** (Linha do tempo, Prontuário, Frequência, Objetivos), **Profissionais** (Sessões, Pacientes atendidos) e **Operacional** (Ocupação de salas, Resumo geral).
+
+<img src="SolucaoClinicaTEA/prints/3_16_visualizador.png" width="75%" alt="Visualizador de Relatório">
+
+Visualizador com filtro de período "De / Até", botão de atualização e impressão com paginação automática via `PrintDocument`.
+
+---
+
+## 🛠️ Stack Técnica
+
+| Camada | Tecnologia |
+|---|---|
+| Linguagem | C# (.NET Framework 4.7.2) |
+| Interface | Windows Forms |
+| Banco de dados | SQL Server Express 2019/2022 |
+| ORM | Dapper 2.1.72 |
+| Ícones | FontAwesome.Sharp 6.6.0 |
+| Autenticação | SHA-256 + GUID salt (UTF-16 LE) |
+
+### Arquitetura
+
+```
+SolucaoClinicaTEA/
+├── CT_Negocio/       ← Camada de negócio (DAOs, modelos, serviços)
+│   ├── DAOs/         ← Acesso a dados via Dapper
+│   ├── Modelos/      ← POCOs mapeados para as tabelas
+│   └── Servicos/     ← Regras de negócio e validações
+├── CT_Win/           ← Camada de apresentação (Windows Forms)
+│   ├── Forms/        ← Janelas modais (login, agendamento, evolução…)
+│   └── UserControls/ ← Módulos carregados no painel central
+└── DatabaseScripts/
+    └── schema.sql    ← Script completo de criação do banco ⬅ COMECE AQUI
+```
+
+---
+
+## ⚙️ Como Executar
+
+### Pré-requisitos
+
+| Ferramenta | Versão mínima |
+|---|---|
+| Windows | 10 / 11 |
+| Visual Studio | 2022 Community (workload *".NET desktop development"*) |
+| SQL Server Express | 2019 ou 2022 — instância `.\SQLEXPRESS` |
+
+### 1. Banco de dados
 
 ```sql
--- Via SSMS: Arquivo → Abrir → Arquivo... → selecione o arquivo abaixo
 -- Via sqlcmd:
-sqlcmd -S .\SQLEXPRESS -E -i "DatabaseScripts\schema.sql"
+sqlcmd -S .\SQLEXPRESS -E -i "SolucaoClinicaTEA\DatabaseScripts\schema.sql"
 ```
 
-O script está em:
-```
-SolucaoClinicaTEA\DatabaseScripts\schema.sql
-```
+O script cria o banco `ClinicaTEA`, todas as tabelas, índices e já insere o usuário administrador padrão.
 
-Ele cria automaticamente o banco `ClinicaTEA` com todas as 9 tabelas, índices e dados iniciais de especialidades e cidades.
+> **Login padrão:** `admin` / `admin123`
 
-### 2. Criar o usuário administrador
+### 2. Compilar e executar
 
-Após executar o schema, crie o primeiro usuário administrador executando a aplicação uma vez e acessando diretamente o banco, ou utilize o seguinte script de exemplo (substitua o hash pelo gerado pela classe `CriptografiaSenha`):
+Abra `SolucaoClinicaTEA\SolucaoClinicaTEA.slnx` no Visual Studio e pressione **F5**.
 
-```sql
-USE ClinicaTEA;
-
--- Exemplo de seed manual (hash e salt de EXEMPLO — não use em produção)
--- O hash correto deve ser gerado pela própria aplicação via CriptografiaSenha.CalcularHash()
-INSERT INTO Usuarios (Login, SenhaHash, Salt, Nome, Perfil, Ativo)
-VALUES (
-    'admin',
-    'SEU_HASH_AQUI',   -- CriptografiaSenha.CalcularHash(salt, "suaSenha")
-    'SEU_SALT_AQUI',   -- CriptografiaSenha.GerarSalt()
-    'Administrador',
-    'Admin',
-    1
-);
-```
-
----
-
-## Compilação e Execução
-
-### Via Visual Studio (recomendado)
-
-1. Clone ou descompacte o repositório.
-2. Abra o arquivo de solução:
-   ```
-   SolucaoClinicaTEA\SolucaoClinicaTEA\SolucaoClinicaTEA.slnx
-   ```
-3. Verifique que o projeto **CT_Win** está configurado como projeto de inicialização (negrito no Solution Explorer).
-4. Pressione **F5** (Debug) ou **Ctrl+F5** (sem debug) para compilar e executar.
-
-### Via linha de comando (MSBuild)
+Ou via MSBuild:
 
 ```powershell
-# Localizar o MSBuild (caminho padrão VS 2022)
 $msbuild = "C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Current\Bin\MSBuild.exe"
 
-# Compilar em Release
-& $msbuild "SolucaoClinicaTEA\SolucaoClinicaTEA\SolucaoClinicaTEA.slnx" /p:Configuration=Release /v:minimal
+# Restaurar pacotes NuGet
+& $msbuild "SolucaoClinicaTEA\SolucaoClinicaTEA.slnx" /t:Restore /p:RestorePackagesConfig=true /v:minimal
 
-# Executável gerado em:
-# SolucaoClinicaTEA\CT_Win\bin\Release\CT_Win.exe
+# Compilar em Release
+& $msbuild "SolucaoClinicaTEA\SolucaoClinicaTEA.slnx" /p:Configuration=Release /v:minimal
+
+# Executável gerado em: SolucaoClinicaTEA\CT_Win\bin\Release\CT_Win.exe
 ```
 
----
-
-## String de Conexão
-
-A string de conexão está em `CT_Win\App.config`:
+### String de conexão (`CT_Win/App.config`)
 
 ```xml
 <add name="ClinicaTEA"
-     connectionString="Data Source=.\SQLEXPRESS;
-                       Initial Catalog=ClinicaTEA;
-                       Integrated Security=true;"
+     connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=ClinicaTEA;Integrated Security=true;"
      providerName="System.Data.SqlClient" />
 ```
 
-Se a sua instância do SQL Server Express tiver um nome diferente (ex.: `SQLEXPRESS2022`), altere o valor de `Data Source` para `.\SQLEXPRESS2022`.
+---
+
+## 📄 Documentação
+
+O relatório técnico completo (ABNT NBR 14724) está disponível em:
+
+- [`SolucaoClinicaTEA/relatorio_final.md`](SolucaoClinicaTEA/relatorio_final.md) — Markdown com todas as telas documentadas
+- [`SolucaoClinicaTEA/relatorio_final.pdf`](SolucaoClinicaTEA/relatorio_final.pdf) — PDF gerado
 
 ---
 
-## Estrutura do Repositório
+## 🎓 Informações Acadêmicas
 
-```
-ClinicaTEA/
-├── SolucaoClinicaTEA/
-│   ├── CT_Negocio/          ← Camada de negócio (DAOs, modelos, serviços)
-│   ├── CT_Win/              ← Camada de apresentação (Windows Forms)
-│   └── DatabaseScripts/
-│       └── schema.sql       ← Script de criação do banco de dados ⬅ COMECE AQUI
-├── relatorio_final.md       ← Documentação ABNT do projeto
-├── .gitignore
-└── README.md
-```
-
----
-
-## Dependências NuGet
-
-| Pacote | Versão | Uso |
-|---|---|---|
-| Dapper | 2.1.72 | ORM leve para mapeamento SQL → POCO |
-| FontAwesome.Sharp | 6.6.0 | Ícones vetoriais na interface |
-| Microsoft.Bcl.AsyncInterfaces | 9.0.1 | Dependência transitiva do Dapper |
-
-As dependências são restauradas automaticamente pelo Visual Studio ou via MSBuild:
-```powershell
-$msbuild = "C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Current\Bin\MSBuild.exe"
-& $msbuild "SolucaoClinicaTEA\SolucaoClinicaTEA\SolucaoClinicaTEA.slnx" /t:Restore /p:RestorePackagesConfig=true /v:minimal
-```
-
-> **Atenção:** O comando `nuget restore` requer o `nuget.exe` instalado separadamente. O comando MSBuild acima funciona sem instalação adicional.
-
----
-
-## Funcionalidades Principais
-
-- ✅ Autenticação com hash SHA-256 + salt por usuário
-- ✅ Cadastro completo de pacientes com dados clínicos do TEA (nível DSM-5, CIPTEA)
-- ✅ Gestão de equipe multidisciplinar por especialidade
-- ✅ Agenda com verificação automática de conflitos de horário
-- ✅ Registro de evolução de sessão (humor, engajamento, conteúdo clínico)
-- ✅ Objetivos terapêuticos por paciente/especialidade com percentual de atingimento
-- ✅ 7 tipos de relatórios com filtro de período e impressão
-
----
-
-## Licença
-
-Projeto acadêmico — Disciplina: Tópicos em Linguagem de Programação I  
-Curso: Engenharia de Computação | Professor: Prof. Datorre  
-Aluno: João Vitor Vissani da Silva Siani — 2026
+| | |
+|---|---|
+| **Curso** | Engenharia de Computação |
+| **Disciplina** | Tópicos em Linguagem de Programação I |
+| **Professor** | Prof. Datorre |
+| **Aluno** | João Vitor Vissani da Silva Siani |
+| **Ano** | 2026 |
