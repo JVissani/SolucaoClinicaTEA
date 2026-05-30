@@ -219,7 +219,7 @@ $msbuild = "C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Curren
 O relatório técnico completo (ABNT NBR 14724) está disponível em:
 
 - [`SolucaoClinicaTEA/relatorio_final.md`](SolucaoClinicaTEA/relatorio_final.md) — Markdown com todas as telas documentadas
-- [`SolucaoClinicaTEA/relatorio_final.pdf`](SolucaoClinicaTEA/relatorio_final.pdf) — PDF gerado
+- [`SolucaoClinicaTEA/SolucaoClinicaTEA.pdf`](SolucaoClinicaTEA/SolucaoClinicaTEA.pdf) — PDF gerado (documento de entrega)
 
 ---
 

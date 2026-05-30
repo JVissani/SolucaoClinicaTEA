@@ -478,7 +478,7 @@ O repositório foi configurado para acesso público e compartilhado com o e-mail
 
 - `/SolucaoClinicaTEA/` — código-fonte completo dos projetos `CT_Negocio` e `CT_Win`
 - `/DatabaseScripts/schema.sql` — script de criação de todas as tabelas, índices e dados iniciais
-- `/relatorio_final.md` e `/relatorio_final.pdf` — este documento de entrega
+- `/SolucaoClinicaTEA.pdf` — este documento de entrega (PDF) e `/relatorio_final.md` (fonte em Markdown)
 - `README.md` — instruções de compilação e configuração do ambiente
 
 ---
