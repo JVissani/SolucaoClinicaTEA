@@ -11,7 +11,7 @@
 
 <div align="center">
 
-# [DEIXE O NOME DA INSTITUIÇÃO AQUI]
+# CENTRO UNIVERSITÁRIO DE VOTUPORANGA – UNIFEV
 
 **Curso:** Engenharia de Computação
 
@@ -21,7 +21,7 @@
 
 **Aluno:** João Vitor Vissani da Silva Siani
 
-**Local:** Macaubal, SP
+**Local:** Votuporanga, SP
 
 **Ano:** 2026
 
@@ -474,7 +474,7 @@ O código-fonte completo deste projeto, incluindo os arquivos de banco de dados,
 
 > **Link do repositório:** [https://github.com/JVissani/SolucaoClinicaTEA](https://github.com/JVissani/SolucaoClinicaTEA)
 
-O repositório foi configurado para acesso público e compartilhado com o e-mail **datorre@gmail.com**. Os arquivos estão organizados na branch `master` e incluem:
+O repositório foi configurado para acesso público e compartilhado com o e-mail **datorre@gmail.com**. Os arquivos estão organizados na branch `main` e incluem:
 
 - `/SolucaoClinicaTEA/` — código-fonte completo dos projetos `CT_Negocio` e `CT_Win`
 - `/DatabaseScripts/schema.sql` — script de criação de todas as tabelas, índices e dados iniciais
