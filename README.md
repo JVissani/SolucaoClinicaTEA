@@ -229,6 +229,6 @@ O relatório técnico completo (ABNT NBR 14724) está disponível em:
 |---|---|
 | **Curso** | Engenharia de Computação |
 | **Disciplina** | Tópicos em Linguagem de Programação I |
-| **Professor** | Prof. Datorre |
+| **Professor** | Prof. Fernando Datorre |
 | **Aluno** | João Vitor Vissani da Silva Siani |
 | **Ano** | 2026 |
